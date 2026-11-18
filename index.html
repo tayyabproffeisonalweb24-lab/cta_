@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Luxury CTA</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #080d18;
+    color: #f5f7fc;
+}
+
+.cta-wrapper {
+    width: 100%;
+    max-width: 1050px;
+}
+
+/* CTA MAIN SECTION */
+.cta-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 75px 45px;
+    text-align: center;
+    border: 1px solid #34445b;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #182740, #0c1422 65%);
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+
+/* Decorative glow */
+.cta-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 330px;
+    height: 330px;
+    left: -100px;
+    top: -150px;
+    border-radius: 50%;
+    background: #d9b979;
+    filter: blur(100px);
+    opacity: .19;
+    pointer-events: none;
+}
+
+.cta-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    bottom: -180px;
+    border-radius: 50%;
+    background: #4285f4;
+    filter: blur(100px);
+    opacity: .17;
+    pointer-events: none;
+}
+
+/* SMALL LABEL */
+.cta-label {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-bottom: 25px;
+    border: 1px solid #756341;
+    border-radius: 50px;
+    color: #e5c58e;
+    background: rgba(229,197,142,.07);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cta-label span {
+    margin-right: 7px;
+}
+
+/* HEADING */
+.cta-section h1 {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    font-size: clamp(32px, 5.5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.cta-section h1 span {
+    color: #e5c58e;
+}
+
+.cta-description {
+    max-width: 620px;
+    margin: 0 auto 34px;
+    color: #aab7ca;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* CTA BUTTONS */
+.cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cta-btn {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .3s ease,
+                background .3s ease,
+                box-shadow .3s ease,
+                color .3s ease;
+}
+
+.cta-primary {
+    color: #101725;
+    background: #e5c58e;
+    border: 1px solid #e5c58e;
+    box-shadow: 0 8px 25px rgba(229,197,142,.12);
+}
+
+.cta-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(229,197,142,.25);
+    background: #f0d8a9;
+}
+
+.cta-secondary {
+    color: #f5f7fc;
+    background: rgba(255,255,255,.035);
+    border: 1px solid #53637a;
+}
+
+.cta-secondary:hover {
+    transform: translateY(-4px);
+    color: #e5c58e;
+    border-color: #e5c58e;
+    background: rgba(229,197,142,.07);
+}
+
+.cta-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+/* TRUST SECTION */
+.cta-trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+    padding-top: 27px;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.trust-item {
+    color: #aab7ca;
+    font-size: 12px;
+}
+
+.trust-item span {
+    margin-right: 6px;
+    color: #e5c58e;
+}
+
+/* MESSAGE */
+.cta-message {
+    margin-top: 20px;
+    color: #e5c58e;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.cta-message:empty {
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .cta-section {
+        padding: 48px 20px;
+        border-radius: 20px;
+    }
+
+    .cta-section h1 {
+        letter-spacing: -.7px;
+    }
+
+    .cta-description {
+        font-size: 14px;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .cta-trust {
+        gap: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="cta-wrapper">
+
+    <section class="cta-section">
+
+        <div class="cta-label">
+            <span>✦</span> Your Next Big Move
+        </div>
+
+        <h1>
+            Ready to Build Something
+            <span>Extraordinary?</span>
+        </h1>
+
+        <p class="cta-description">
+            Turn your vision into reality with modern technology,
+            elegant design and smart digital solutions.
+            Let's create something remarkable together.
+        </p>
+
+        <div class="cta-actions">
+
+            <a href="mailto:hello@example.com"
+               class="cta-btn cta-primary">
+                Get Started <span aria-hidden="true">→</span>
+            </a>
+
+            <button type="button"
+                    class="cta-btn cta-secondary"
+                    id="learnBtn">
+                Learn More <span aria-hidden="true">↗</span>
+            </button>
+
+        </div>
+
+        <div class="cta-trust">
+
+            <div class="trust-item">
+                <span>✓</span> Modern Design
+            </div>
+
+            <div class="trust-item">
+                <span>✓</span> Responsive Layout
+            </div>
+
+            <div class="trust-item">
+                <span>✓</span> Built for Growth
+            </div>
+
+        </div>
+
+        <p class="cta-message" id="message" aria-live="polite"></p>
+
+    </section>
+
+</main>
+
+<script>
+"use strict";
+
+const learnBtn = document.getElementById("learnBtn");
+const message = document.getElementById("message");
+
+learnBtn.addEventListener("click", function () {
+    if (message.textContent) {
+        message.textContent = "";
+        learnBtn.innerHTML = 'Learn More <span aria-hidden="true">↗</span>';
+        return;
+    }
+
+    message.textContent =
+        "Great design starts with a clear vision. Customize this CTA for your own business and services.";
+
+    learnBtn.innerHTML = 'Show Less <span aria-hidden="true">↑</span>';
+});
+</script>
+
+</body>
+</html>
